@@ -1,2 +1,50 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        
+    </head>
+    
+    <body>
+        <h1>Editing Book</h1>
+        
+            <% if @book.errors.any? %>
+            <%= @book.errors.count %>errors!?
+         <ul>
+             <% @book.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+             <%end%>
+         </ul>
+         
+         <%end%>
+            
+    
+                
+        
+        <%= form_with model: @book do |f| %>
+        
+        <div class="new-book">
+        
+         <div class="nbbox">
+             <div>Title</div>
+             <%=f.text_field:title%>
+             </div>
+         
+         
+         <div class="nbbox">
+             <div>Body</div>
+             <%=f.text_area:body%>
+             </div>
+         
+         
+         <div class="submit">
+             <%=f.submit'Update Book'%>
+         </div>
+         <%end%>
+         
+         <%= link_to"Show", book_path(@book) %>
+         |
+         <a href="/books">Back</a>
+        
+    </body>
+</html>

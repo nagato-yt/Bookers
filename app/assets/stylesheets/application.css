@@ -13,11 +13,7 @@
  *= require_tree .
  *= require_self
  */
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-}
+
 
 body{
     margin:33px;
@@ -28,11 +24,6 @@ body{
     line-height: 18px;
 }
 
-h1{
-    
-    font-size:2em;
-
-}
 
 p{
     display: block;
@@ -51,4 +42,12 @@ td{
     
 }
 
+.nbbox,.submit{
+    margin-bottom: 10px;
+}
 
+.flash{
+    color: green;
+}
+
+ 
